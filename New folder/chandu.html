@@ -44,14 +44,14 @@ h2{
                <a href="#" class="navbar-brand">News API</a>
                </div>
 			 <ul class="nav navbar-nav">
-		        <li><a href="" >ABC News</a></li>
-				<li><a href="">BBC News</a></li>
-		        <li><a href="">BBC Sports</a></li>
-		        <li><a href="">ESPN</a></li>
-		        <li><a href="">Business Insider</a></li>
-				<li><a href="">Buzzfeed</a></li>
-				<li><a href="">CNBC</a></li>
-				<li><a href="">CNN</a></li>
+		        <li><button >ABC-News<button></li>
+				<li><button>BBC-News</button></li>
+		        <li><button>BBC-Sport</button></li>
+		        <li><button >ESPN</button></li>
+		        <li><button>Business-Insider</button></li>
+				<li><button>Buzzfeed</button></li>
+				<li><button>CNBC</button></li>
+				<li><button>CNN</button></li>
 				
 			 </ul>
 			</div>
@@ -74,14 +74,14 @@ h2{
 		<div class="row">
 			<div class="col-md-3" >
 				<h1><b> Channels</b> </h1>
-				<input type="checkbox" id="news0" value="abc-news">ABC News<br>
-				<input type="checkbox" id="news1" value="bbc-news" >BBC News<br>
-				<input type="checkbox" id="news2" value="bbc-sport">BBC Sport<br>
+				<input type="checkbox" id="news0" value="abc-news">ABC-News<br>
+				<input type="checkbox" id="news1" value="bbc-news" >BBC-News<br>
+				<input type="checkbox" id="news2" value="bbc-sport">BBC-Sport<br>
 				<input type="checkbox" id="news3" value="espn" >ESPN<br>
-				<input type="checkbox" id="news4" value="business-insider"> Business Insider<br>
+				<input type="checkbox" id="news4" value="business-insider"> Business-Insider<br>
 				<input type="checkbox" id="news5" value="buzzfeed" >Buzzfeed<br>
 				<input type="checkbox" id="news6" value="cnbc">CNBC<br>
-				<input type="checkbox" id="news7" value="cnn" >CNN<br><br><br><br><br><br><br><br><br><br><br>
+				<input type="checkbox" id="news7" value="cnn" >CNN<br><br><br><br><br><br><br><br>
 			</div>
 			<div class="col-md-9 search "  style="display:block">
 				<div class="fonts-in-search-results">
@@ -125,6 +125,7 @@ h2{
 <script>
 var title1,url1,total1;
 var arr=[];
+
 function top_headlines()
 {
 	fetch('https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=2b2b21604b474729869dca8930baf376').
@@ -159,7 +160,7 @@ function top_headlines()
 function search()
 {
 	let news=[];
-	let keyword=document.getElementById("searchbox").value ;
+	let keyword=document.getElementById("searchbox").name;
 
 	for(let i=0;i<8;i++)
 	{
@@ -218,6 +219,8 @@ function search()
 				}
 				else{
 					alert(`No search results found for "${keyword}"`);
+					document.getElementById("heading1").innerHTML=`<b>Top Search Results for "${keyword}" are...<b>`;
+					
 				}
 			});
 		}
@@ -234,6 +237,71 @@ function search()
 }
 
 
+function ABC_News()
+{
+	
+	let source=document.getElementById("nav0").innerHTML.toLowerCase();
+	if(source ==="abc-news")
+	
+	fetch('https://newsapi.org/v2/top-headlines?sources=abc-news&apiKey=2b2b21604b474729869dca8930baf376').
+	then((res)=>{
+	
+		return res.json()
+	}) 
+	
+
+	.then((data)=>{
+		let total = data.totalResults;
+		console.log(total);
+	
+
+		document.getElementById("heading1").innerHTML=`<b>ABC_News</b>`;
+		for(let i=0;i<total;i++)
+		{
+			 let title=JSON.stringify(data.articles[i].title);
+			 let url=JSON.stringify(data.articles[i].url);
+			 arr.push(title1);
+
+			document.getElementById("demo"+i).innerHTML=`<a target="_blank" href=${url}>
+			<ul>
+			<li id="list1"><span><b>${title}</b></span></li>
+			</ul>  
+			</a>`;
+		} 
+	});
+
+}
+
+function BBC_News(){
+	
+
+}
+
+function BBC_Sports(){
+	
+}
+
+function ESPN(){
+
+}
+
+function BI(){
+	
+	
+}
+
+function BF(){
+
+}
+
+
+function CNBC(){
+
+}
+
+function CNN(){
+
+}
 </script>
 
 </body> 
