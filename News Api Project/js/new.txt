@@ -1,0 +1,13 @@
+<nav  class="navbar navbar-inverse">
+		    <div class="navbar-fluid">
+			   <div class="navbar-header">
+               <a href="#" class="navbar-brand">ABC News</a>
+               </div>
+			 <ul class="nav navbar-nav">
+		        <li><a href="">Breaking News</a></li>
+		        <li><a href="">Sports</a></li>
+		        <li><a href="">Technology</a></li>
+		        <li><a href="">entertainment</a></li>
+			 </ul>
+			</div>
+	   </nav>
