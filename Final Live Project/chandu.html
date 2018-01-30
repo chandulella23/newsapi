@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Lella Chandu sai </title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="styles.css">
+
+	<div class="row">
+		<div class="col-md-3">
+			<div style="float:left;padding-top:10px;padding-left:10px">
+				<img src="new image.jpg" width="100px" height="100px">
+			</div>
+		</div>
+
+		<div class="col-md-9">
+  		<div style="padding-right:300px">
+				<center><h1 ><b>News API</b></h1></center>
+				<center><h2><b>The T10 News Teller</b></h2></center>
+			</div>
+		</div>
+	</div>
+
+</head>
+
+<body  onload="top_headlines()" onkeypress=if(event.keyCode==13){search();}>
+	<nav  class="navbar navbar-inverse ">
+    <div class="navbar-fluid">
+
+	   	<div class="navbar-header">
+       	<a href="chandu.html" class="navbar-brand"><i class="fa fa-home"></i> Home</a>
+    	</div>
+
+			<ul class="nav navbar-nav">
+		   	<li><button class="but0" value="abc-news"><i class="fa fa-cloud"></i> ABC-News</button><li>
+				<li><button class="but0" value="bbc-news"><i class="fa fa-cloud"></i> BBC-News</button></li>
+		    <li><button class="but0" value="bbc-sport"><i class="fa fa-cloud"></i> BBC-Sport</button></li>
+		    <li><button class="but0" value="espn"><i class="fa fa-cloud"></i> ESPN</button></li>
+		    <li><button class="but0" value="business-insider"><i class="fa fa-cloud"></i> Business-Insider</button></li>
+				<li><button class="but0" value="buzzfeed"><i class="fa fa-cloud"></i> Buzzfeed</button></li>
+				<li><button class="but0" value="cnbc"><i class="fa fa-cloud"></i> CNBC</button></li>
+				<li><button class="but0" value="cnn"><i class="fa fa-cloud"></i> CNN</button></li>
+			</ul>
+			</div>
+	   </nav>
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-3 form-group">
+			</div>
+			<div class="col-md-6">
+			</div>
+
+			<div class="col-md-3">
+				<input type="text" id="searchbox" placeholder="Search here..." required>
+				<button type="submit" onclick="search()"><i class="fa fa-search"></i></button>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3" style="border:2px solid black;margin-right:10px; padding22px;" >
+					<h1><b> Channels</b> </h1>
+					<input type="checkbox" id="news0" value="abc-news"><b>ABC-News</b><br>
+					<input type="checkbox" id="news1" value="bbc-news" ><b>BBC-News</b><br>
+					<input type="checkbox" id="news2" value="bbc-sport"><b>BBC-Sport</b><br>
+					<input type="checkbox" id="news3" value="espn" ><b>ESPN</b><br>
+					<input type="checkbox" id="news4" value="business-insider"><b> Business-Insider</b><br>
+					<input type="checkbox" id="news5" value="buzzfeed" ><b>Buzzfeed</b><br>
+					<input type="checkbox" id="news6" value="cnbc"><b>CNBC</b><br>
+					<input type="checkbox" id="news7" value="cnn" ><b>CNN</b><br><br><br>
+				</div>
+				<div class="col-md-9 search "  style="display:block;height:400px;overflow:scroll">
+					<div class="fonts-in-search-results">
+
+						<div id="demo">
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-6">
+					<h1 id="heading2"> </h1>
+				</div>
+				<div class="col-md-6">
+					<h1 id="heading2"> </h1>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<p id="result0"> </p>
+				</div>
+				<div class="col-md-6">
+					<p id="result1"> </p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<p id="result2"> </p>
+				</div>
+				<div class="col-md-6">
+					<p id="result3"> </p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<p id="result4"> </p>
+				</div>
+				<div class="col-md-6">
+					<p id="result5"> </p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<p id="result6"> </p>
+				</div>
+				<div class="col-md-6">
+					<p id="result7"> </p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<p id="result8"> </p>
+				</div>
+				<div class="col-md-6">
+					<p id="result9"> </p>
+				</div>
+			</div>
+
+		</div>
+
+	  <script src="script.js">
+	  </script>
+	</div>
+</body>
+</html>
