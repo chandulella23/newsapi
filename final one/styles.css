@@ -1,0 +1,53 @@
+body{
+	background-color:#EEEEEE;
+}
+
+h1{
+	color:darkblue;
+}
+h2{
+	color:darkblue;
+}
+
+
+#list1{
+	color:red;
+}
+#list2{
+	color:green;
+}
+
+li span {
+  color: black;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+}
+.search{
+	border-style:none;
+	height:200px;
+	width: 800px;
+	align-content: center;
+	padding: 0px;
+}
+
+
+.but0{
+	border-color: #337ab7;
+	color:#777;
+	border-style:none;
+	width:150px;
+	padding: 15px 10px;
+	font-size: 13px;
+
+	text-align: center;
+	background-color: transparent;
+}
+
+.but0:hover,
+.but0:focus {
+  text-decoration: none;
+  color:#ACDCFF;
+}
