@@ -49,9 +49,9 @@ function top_headlines()
 		for(let i=0;i<total1;i++)
 		{
 			 description1=JSON.stringify(data.articles[i].description);
-			 image1=JSON.stringify(data.articles[i].urlToImage);
-			 title1=JSON.stringify(data.articles[i].title);
-			 url1=JSON.stringify(data.articles[i].url);
+			 image1=data.articles[i].urlToImage;
+			 title1=data.articles[i].title;
+			 url1=data.articles[i].url;
 
 //passing description1,image,title1,url1 as global values to get access these in other functions
 			arr_tit.push(title1);
@@ -134,9 +134,9 @@ function search()
 								continue;
 							}
 							let description2=JSON.stringify(data.articles[i].description);
-							let image2=JSON.stringify(data.articles[i].urlToImage);
-							let title2=JSON.stringify(data.articles[i].title);
-							let url2=JSON.stringify(data.articles[i].url);
+							let image2=data.articles[i].urlToImage;
+							let title2=data.articles[i].title;
+							let url2=data.articles[i].url;
 							let display=`<a href=${url2}>
 							<ul><img src=${image2}  width="150" height="150"> <b>${title2}</b></a>
 							<li id="list2"><span><b>Description: ${description2}</b></span></li>
@@ -234,9 +234,9 @@ function onChannelClick(channel)
 
 //getting description,title,url and image of that particular channel articles
  			 description3=JSON.stringify(data.articles[i].description);
-			 title3=JSON.stringify(data.articles[i].title);
-			 url3=JSON.stringify(data.articles[i].url);
-			 image3=JSON.stringify(data.articles[i].urlToImage);
+			 title3=data.articles[i].title;
+			 url3=data.articles[i].url;
+			 image3=data.articles[i].urlToImage;
 
 //our html code will be saved in title_news on every iteration
 			title_news=`<a target="_blank" href=${url3}>
